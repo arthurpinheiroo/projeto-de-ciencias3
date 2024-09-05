@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', sans-serif;
+   background-color: white;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6; /* Melhor legibilidade */
+    font-family: 'Poppins';
+}
+
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    top: 2%;
+    left: 10px;
+    
+}
+
+
+
+header h1 {
+    font-size: 2.5em; /* Tamanho ajustado para melhor hierarquia */
+    color: inherit;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
+    width: 450px;
+    position: absolute;
+    left: 38%;
+    color: inherit;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Ajustar o espaçamento entre os itens */
+    transition: transform 0.3s ease; /* Transição suave para o movimento */
+}
+
+nav ul li:hover {
+    transform: translateY(-5px); /* Move o item 5px para cima ao passar o mouse */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para cor de fundo e texto */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000; /* Melhor contraste no hover */
+}
+
+
+
+.container {
+    width: 750px;
+    height: 100px;
+    position: absolute;
+    left: 10%;
+    top: 27%;
+    font-size: 15px;
+}
+
+.container p {
+    font-size: 20px;
+    width: 850px;
+}
+
+.img1 {
+    position: absolute;
+    left: 1389px;
+
+    border-radius: 10px;
+}
+
+.img1 img {
+    width: 390px;
+    border-radius: 170px;
+}
+
+.circle {
+    position: absolute;
+    left: 73%;
+    top: 30%;
+    width: 450px; /* Largura do círculo */
+    height: 450px; /* Altura do círculo (igual à largura) */
+    background-color: #1aec21; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Torna o elemento um círculo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito */
+    z-index: -1;
+}
+
+.logo-png {
+    position: absolute;
+    list-style: none;
+    top: 2%;
+    left: 4%;
+    cursor: pointer;
+}
+
+.logo-png img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.logo-h1 {
+    position: absolute;
+    top: 3%;
+    left: 9%;
+    cursor: pointer;
+}
+
+/* Seção Contatos */
+/* Contact Section */
+#contact {
+    background-color: #222020;
+    height: 400px;
+    color: white;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    position: absolute;
+    top: 90%;
+    left: -2%;
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+    width: 1950px;
+}
+
+.container2 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+
+#contact h2 {
+    font-size: 2.2em; /* Tamanho ajustado para melhor hierarquia */
+    color: white;
+    margin-bottom: 15px;
+
+}
+
+#contact #altina {
+    position: absolute;
+    left: 5%;
+    top: 13%;
+    color: white;
+    font-family: 'Poppins';
+}
+
+#contact p {
+    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
+    color: inherit;
+    margin-bottom: 15px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    font-size: 1.1em; /* Ajustado para melhor legibilidade */
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#scroll-to-contact {
+    background: linear-gradient(135deg, #ffffff, #00ff0d); /* Gradiente sutil */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 12px rgba(0, 198, 255, 0.2);
+    outline: none;
+    margin-top: 20px;
+}
+
+#scroll-to-contact:hover {
+    background: linear-gradient(135deg, #ffffff, #81c784);
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 198, 255, 0.3);
+}
+
+#scroll-to-contact:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ffffff;
+}

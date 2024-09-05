@@ -1,0 +1,323 @@
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+#img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Altura da tela inteira */
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Garante que nada extrapole o contêiner */
+}
+
+#img1 > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+    margin: 0;
+    padding: 0;
+}
+
+#img1::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    top: 2%;
+    left: 0; /* Garante que o header está alinhado à borda esquerda */
+    z-index: 2; /* Garante que o header está acima da imagem e do gradiente */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0; /* Remove a margem */
+}
+
+nav ul li {
+    margin: 0 15px;
+
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+
+
+
+.h1 {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    width: 950px;
+}
+
+.h1 p {
+    color: white;
+    font-size: 30px;
+}
+
+.quiz-btn {
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+#quiz-btn {
+    font-family: 'Poppins';
+    background-color: rgb(22, 231, 22);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 130px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#quiz-btn:hover {
+    transform: translateY(-10px);
+}
+
+.info {
+    position: absolute;
+    top: 130%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pqs {
+    display: flex;
+    gap: 80px; /* Espaçamento entre os parágrafos */
+    max-width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.pqs p {
+    flex: 1;
+    width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transição suave para a transformação */
+}
+
+.pqs p:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do parágrafo em 10% ao passar o mouse */
+}
+
+.p3 {
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 950px;
+}
+
+.p3 p {
+    font-family: 'Raleway';
+    font-size: 30px;
+}
+
+
+.logo-png {
+    position: absolute;
+    list-style: none;
+    top: 1%;
+    left: 4%;
+    cursor: pointer;
+}
+
+.logo-png img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.logo-h1 {
+    position: absolute;
+    top: 2%;
+    left: 9%;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.popup-info {
+    background-color: #333; /* Cor de fundo para visibilidade */
+    color: white; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 500px; /* Largura máxima */
+    margin: auto; /* Centraliza horizontalmente */
+    position: relative; /* Necessário para o posicionamento absoluto dos botões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra da caixa */
+}
+
+.popup-info h1 {
+    font-size: 1.8em; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+.info {
+    display: block; /* Garante que cada item ocupe uma linha */
+    margin-bottom: 10px; /* Espaço abaixo de cada item */
+}
+
+.btn-group {
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
+.info-btn {
+    background-color: #00c6ff; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 5px; /* Bordas arredondadas dos botões */
+    font-size: 1em; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Cursor de mão ao passar sobre os botões */
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center; /* Alinha o texto ao centro dos botões */
+}
+
+.exit-btn {
+    background-color: #ff4d4d; /* Cor de fundo do botão "Sair do quiz" */
+    margin-right: 10px; /* Espaço à direita do botão */
+}
+
+.continue-btn {
+    background-color: #4caf50; /* Cor de fundo do botão "Continuar" */
+}
+
+.info-btn:hover {
+    opacity: 0.9; /* Efeito de hover */
+}
+
+.info-btn:active {
+    opacity: 0.8; /* Efeito ao clicar no botão */
+}
+
+/* Popup */
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out; /* Animação de entrada */
+}
+
+/* Animação de entrada do popup */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Conteúdo do popup */
+.popup-content {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra da caixa */
+    animation: slideUp 0.3s ease-out; /* Aplica a animação ao conteúdo do popup */
+}
+
+/* Botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Botões dentro do popup */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+.close-popup, #continue-popup {
+    background-color: #007bff; /* Cor padrão dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s; /* Efeitos de transição */
+}
+
+.close-popup {
+    background-color: #dc3545; /* Cor para o botão "Não" */
+}
+
+#continue-popup {
+    background-color: #28a745; /* Cor para o botão "Sim" */
+}
+
+.close-popup:hover {
+    background-color: #b30000; /* Cor de fundo ao passar o mouse */
+}
+
+#continue-popup:hover {
+    background-color: rgb(21, 199, 21);
+}
+
+.close-popup:active, #continue-popup:active {
+    transform: scale(0.95); /* Efeito de clique */
+}

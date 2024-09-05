@@ -1,0 +1,316 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6; /* Melhor legibilidade */
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative; /* Alterado de absolute para relative */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamanho ajustado para melhor hierarquia */
+    color: green;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
+    width: 100%;
+    max-width: 800px; /* Máximo de largura para melhor leitura */
+    margin: 0 auto;
+}
+
+header .p2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para se ajustar a telas menores */
+}
+
+nav ul li {
+    margin: 0 15px; /* Ajustar o espaçamento entre os itens */
+    transition: transform 0.3s ease; /* Transição suave para o movimento */
+}
+
+nav ul li:hover {
+    transform: translateY(-5px); /* Move o item 5px para cima ao passar o mouse */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para cor de fundo e texto */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000; /* Melhor contraste no hover */
+}
+
+/* Seção de dicas */
+main {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#tip-generator {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+#generate-tip {
+    background: linear-gradient(135deg, #ffffffcb, #00ff0d); /* Gradiente sutil */
+    color: #ffffff;
+    border: none;
+    padding: 22px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 198, 255, 0.2);
+    outline: none;
+    margin-top: 20px;
+}
+
+#generate-tip:hover {
+    background: linear-gradient(135deg, #ffffff, #00ff0d); /* Alterar gradiente no hover */
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 198, 255, 0.3);
+}
+
+#generate-tip:active {
+    transform: scale(0.98);
+}
+
+#tip {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: inherit;
+    font-style: italic;
+}
+
+/* Seção Sobre Nós */
+#about {
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Seção Contatos */
+#contact {
+    background: linear-gradient(145deg, #98c455 0%, #019147 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+    width: 100%;
+    max-width: 1000px; /* Máximo de largura para melhor leitura */
+    height: auto;
+}
+
+#contact h2 {
+    font-size: 2.2em; /* Tamanho ajustado para melhor hierarquia */
+    color: white;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
+    color: inherit;
+    margin-bottom: 15px;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Imagem com Animação */
+.img1 > img {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0.7;
+    animation: slideIn 1s ease-out, fadeIn 1s ease-out;
+}
+
+/* Animação de Slide In */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 1em;
+        width: 90%;
+        max-width: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    #tip-generator {
+        font-size: 18px;
+        width: 90%;
+        max-width: none;
+    }
+
+    #generate-tip {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+
+    #contact {
+        width: 90%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    .tex-1, .tex-2, .tex-3 {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        box-shadow: none; /* Removido para telas pequenas */
+        transform: scale(1); /* Removido o efeito de escala */
+    }
+
+    .logo-png, .logo-h1 {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .logo-png img, .logo-h1 img {
+        width: 60px;
+    }
+
+    .entrar-registrar {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: auto;
+    }
+
+    .Entrar, .registrar {
+        margin: 10px 0;
+    }
+
+    .img1, .img2, .img-mundo {
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .container1, .container2 {
+        width: 90%;
+        max-width: none;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .tex-1, .tex-2, .tex-3 {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .estufah1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 20px;
+    }
+}
